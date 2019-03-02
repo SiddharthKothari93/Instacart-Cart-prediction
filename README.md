@@ -1,21 +1,59 @@
-# Instacart-Cart-prediction
-**Team Members**: Siddharth Kothari, Siddartha Rao, Vishal Singh
+# Data Science Intern Take Home
 
-**Project Summary**: Using the Instacart Public Datasets, we are focusing on solving following problems: 
-a) Predicting which product customer will reorder again 
-b) Clustering the customers based on their historical purchase behavior 
-c) Recommending relevant products based on cluster and transactional history
+The following is a take-home coding and modeling exercise.  NOTE: ANY CODE TAKEN 
+FROM A NON-API SOURCE MUST BE CITED! Any submission that does not cite a source, 
+whether it's Kaggle, Stack Overflow, or other data science sites, WILL BE IMMEDIATELY 
+REJECTED with no exceptions. We recommend citing sources including scikit-learn.org, 
+pandas.pydata.org, and other API sources just to avoid confusion. Also cite any git 
+repos, including your own, that you have used. 
 
-**Project Introduction**: Want more personalized grocery recommendations to accommodate your shopping style? Want to save frequent trips to the market? Instacart is a same day grocery delivery app which provides delivery as fast as one hour. Instacart provides personal shoppers, who can shop and deliver groceries at your doorstep saving you time and money.
+You will have 3 hours to complete the exercise.
 
-Instacart can benefit enormously from this project. Personalized recommendation and prediction will increase the user experience, allowing customers to move swiftly across products making it easier to shop. This will not merely reduce but also entices new customers by enabling them to reduce shopping time. The common behavior of the clusters can be used to predict and recommend which new product customer is most likely to buy and hence can boost the sales and profit.
+### Problem Statement
 
-**Data Set**: The dataset used was Instacart’s open sourced user’s transcational data, The Instacart Online Grocery Shopping Dataset 2017. The dataset is a relational set of files describing customers’ orders over time. The dataset is anonymized and contains a sample of over 3 million grocery orders from more than 200,000 Instacart users. For each user, it provide between 4 and 100 of their orders, with the sequence of products purchased in each order. It also provide the week and hour of day the order was placed, and a relative measure of time between orders.
+An executive has asked you to explore some new data we have received on a subset
+of our customers and report back with some findings about the information
+contained in the data. Your objective is to leverage the dataset to learn more
+about our customers. To do this please explore the data and build a model to
+predict the account status of each customer. You are free to use any technique
+or method you would like to explore the data and generate insights. 
 
-The dataset consists of 6 files:
-1) ’aisles.csv’: Contains aisle id and respective aisle name
-2) ’departments.csv’: Contains department id and respective aisle name
-3) ’order products prior.csv’: Contains transcational history of which product were purchased in each order, were they reordered, and thier add to cart order id and respective aisle name
-4) ’order products train.csv’: Contains details of which product were purchased in the last order of few users, were they reordered, and their add to cart order id and respective aisle name
-5) ’orders.csv’: Contains more details about each order like day of week, order number etc, Also tell which set (prior, train, test) does the order belong to.
-6) ’products.csv’: Contains product details of product name, their aisle and department.
+We ask that you generate a report to summarize your findings. The report should
+present evidence for your findings and take-aways that you generate. The report
+can be a code notebook like R Markdown or a Jupyter Notebook, a Word document,
+or a Powerpoint Presentation (Google Doc equivalents are fine). In addition we
+ask that you share all code and analysis that you used to explore the data and
+generate the report. We should be able to recreate any findings you present from
+the code that you share with us. If you do use a notebook to build your report
+please send an additional html copy of the notebook. 
+
+### Data
+
+ You will find 2 files attached in this take home: 
+- `account_info.csv`: This dataset is at an account-transaction type level, so
+each account will have multiple rows. The data contains the total balance,
+number of debit, and number of credit transactions in 9 different checking
+categoires. In addition there is an "Overall" category that contains the
+account's total balance, number of debit, and number of credit transactions for
+all categories, including the previous 9 categories. "Debit" transactions are
+withdrawals from the account and "credit" transactions are deposits. Some
+accounts had no transactions in a given category so those have 0 balance,
+debits, and credits for those categories. 
+- `account_labels.csv`: contains the account_id and label which specifies if 
+the account is in default; 1 being default, 0 being not default. 
+
+### Deliverables
+
+- Explanation of the code, experiments, and thought process behind approaches you decided 
+to take
+- Code/scripts/notebooks that you used to run the experiments
+- The presentation document you would present to summarize your work
+
+Some guidance on what a great submission looks like:
+- All deliverables as specified in this README;
+- Clean, well-structured, and commented code;
+- Data processing as necessary;
+- Clear explanations of your thought process behind the approaches you decided to take.
+
+
+Upon completion, please e-mail your response to datascienceus@kabbage.com
